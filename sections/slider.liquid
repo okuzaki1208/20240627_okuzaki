@@ -1,0 +1,356 @@
+<style>
+.swiper-container{
+    max-height: 100vh;
+    transition: height .6s cubic-bezier(.44, .13, .48, .87);
+}
+.swiper-slide{
+    position: relative;
+}
+.swiper-slide img{
+    width: 90%;
+    height: 90%;
+    object-fit: cover;
+    vertical-align: bottom;
+    padding: 30px;
+}
+.slide-overlay::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(204,204,204,0.7);
+}
+.swiper-slide .slide-content{
+    position: absolute;
+    top: 50%;
+    padding: 20px;
+}
+@media only screen and (max-width: 750px) {
+    .swiper-slide .slide-content{
+        padding: 0px;
+    }
+}
+.swiper-slide .slide-content.center{
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    text-align: center;
+}
+.swiper-slide .slide-content.left{
+    left: 0%;
+    transform: translateX(0%) translateY(-50%);
+    text-align: left;
+}
+.swiper-slide .slide-content.right{
+    right: 0%;
+    transform: translateX(0%) translateY(-50%);
+    text-align: right;
+}
+.swiper-slide .slide-content h2{
+    color: #000 !important;
+    margin-bottom: 20px;
+}
+.swiper-slide .slide-content p{
+    margin: 0px;
+}
+.slideshow--small {
+  height: 175px; 
+}
+@media only screen and (min-width: 750px) {
+    .slideshow--small{
+      height: 475px; 
+    } 
+}
+.slideshow--medium {
+    height: 270px; 
+}
+@media only screen and (min-width: 750px) {
+    .slideshow--medium{
+      height: 650px; 
+    }
+}
+.slideshow--large{
+    height: 375px; 
+}
+@media only screen and (min-width: 750px) {
+    .slideshow--large {
+      height: 775px; 
+    } 
+}
+.swiper-slide .slide-content h2.mega-title--large{
+    font-size: 45px;
+}
+.swiper-slide .slide-content p.mega-desc--large{
+    font-size: 22px;
+}
+@media only screen and (max-width: 750px) {
+    .swiper-slide .slide-content h2{
+        font-size: 18px;
+    }
+    .swiper-slide .slide-content p{
+        font-size: 12px;
+    }
+    .swiper-slide .slide-content h2.mega-title--large{
+        font-size: 22px;
+    }
+    .swiper-slide .slide-content p.mega-desc--large{
+        font-size: 14px;
+    }
+}
+.slideshow__btn{
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: red;
+    color: #fff;
+    text-decoration: none;
+}
+@media only screen and (max-width: 750px) {
+    .slideshow__btn{
+        display: inline-block;
+        margin-top: 10px;
+        padding: 5px 10px;
+    }
+ }
+
+ /*ナビゲーションのカスタマイズ*/
+	.slider-other-menu{
+	    position: absolute;
+	    bottom: 10px;
+	    transform: translateX(50%);
+	    right: 50%;
+	    left: auto;
+	    width: 320px;
+	    height: 44px;
+	    background-color: rgba(0,0,0,.4);
+	    color: rgba(255,255,255,.5);
+	    z-index: 1;
+	}
+	.swiper-pagination-clickable .swiper-pagination-bullet{
+	    margin: -4px 10px;
+	}
+	.swiper-pagination {
+	    top: 4px;
+	    left: 32px;
+	}
+	.swiper-pagination-bullet-active{
+	    background: #fff;
+	}
+	.swiper-pagination-bullet{
+	    background: rgb(255,255,255);
+	}
+	.swiper-button-prev, .swiper-button-next{
+	    display: block !important; 
+	    bottom: -10px;
+	    top: auto;
+	    color: rgba(255,255,255,.5);
+	}
+	.swiper-button-next:after, .swiper-button-prev:after{
+	    font-size:15px;
+	}
+	.swiper-button-prev{
+	    left: calc(50% - 280px / 2);
+	}
+	.swiper-button-next{
+	    right: calc(50% - 320px / 2);
+	}
+
+
+ </style>
+
+
+
+
+
+
+
+
+ <div class="swiper-container slideshow--{{ section.settings.slide_height }}">
+   <div class="swiper-wrapper">
+   {%- for block in section.blocks -%}
+     <div class="swiper-slide">
+		{% if section.settings.show_overlay == true %}
+            <div class="slide-overlay">
+            </div>
+        {% endif %}
+            {%- if block.settings.image != blank -%}
+                <img src="{{ block.settings.image | img_url: '2049x' }}"  loading="lazy">
+            {%- else -%}
+                {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+            {%- endif -%}
+
+            <div class="slide-content 
+            {% if section.settings.text_alignment == 'center center' %} center {% endif %}
+            {% if section.settings.text_alignment == 'left center' %} left {% endif %}
+            {% if section.settings.text_alignment == 'right center' %} right {% endif %}
+            ">
+                <h2 class="{% if section.settings.text_size == 'large' %} mega-title--large{% endif %}">{{ block.settings.slide_title }}</h2>
+                <p class="{% if section.settings.text_size == 'large' %} mega-desc--large{% endif %}">{{ block.settings.subheading }}</p>
+            </div>
+     </div>
+     {%- endfor -%}
+     </div>
+      <div class="slider-other-menu">
+        <!-- 前ページボタン -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+        <!-- 次ページボタン -->
+        <div class="swiper-button-next"></div>
+      </div>
+   </div>
+
+
+
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+    const swiper = new Swiper('.swiper-container', {
+        // 自動再生（true:自動再生する、false:自動再生しない）
+            autoplay: {
+                delay: {{ section.settings.speed }} * 1000,
+            },
+            direction: 'horizontal',
+            effect: 'slide',
+            loop: true,
+            slidesPerView: 3,
+            pagination: {
+                el: '.swiper-pagination',
+                type: 'bullets',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            }
+        });
+    });
+</script>
+{% schema %}
+    {
+        "name": "swiperスライダー",
+        "class": "slide-wrap",
+        "settings": [
+            {
+                "type": "select",
+                "id": "slide_height",
+                "label": "スライドの高さ",
+                "default": "adapt",
+                "options": [
+                    {
+                        "label": "最初の画像の高さに対応",
+                        "value": "adapt"
+                    },
+                    {
+                        "label": "小",
+                        "value": "small"
+                    },
+                    {
+                        "label": "中",
+                        "value": "medium"
+                    },
+                    {
+                        "label": "大",
+                        "value": "large"
+                    }
+                ]
+            },
+            {
+                "type": "select",
+                "id": "text_size",
+                "label": "文字サイズ",
+                "options": [
+                    {
+                        "label": "中",
+                        "value": "medium"
+                    },
+                    {
+                        "label": "大",
+                        "value": "large"
+                    }
+                ]
+            },
+            {
+                "type": "select",
+                "id": "text_alignment",
+                "label": "テキストアラインメント",
+                "default": "center center",
+                "options": [
+                    {
+                        "label": "中心",
+                        "value": "center center"
+                    },
+                    {
+                        "label": "左中央",
+                        "value": "left center"
+                    },
+                    {
+                        "label": "右中央",
+                        "value": "right center"
+                    }
+                ]
+            },
+            {
+                "type": "checkbox",
+                "id": "show_overlay",
+                "label": "オーバーレイを表示する",
+                "default": true
+            },
+            {
+                "type": "checkbox",
+                "id": "auto",
+                "label": "スライドの自動切り替え",
+                "default": false
+            },
+            {
+                "type": "range",
+                "id": "speed",
+                "label": "スライドの変更する間隔",
+                "max": 9,
+                "min": 1,
+                "step": 2,
+                "unit": "秒",
+                "default": 5
+            }
+        ],
+        "blocks": [
+            {
+                "type": "slide",
+                "name": "画像ブロック",
+                "limit": 9,
+                "settings": [
+                    {
+                        "type": "image_picker",
+                        "id": "image",
+                        "label": "画像"
+                    },
+                    {
+                        "type": "text",
+                        "id": "slide_title",
+                        "default": "ブロック名が入ります。",
+                        "label": "ブロック名"
+                    },
+                    {
+                        "type": "text",
+                        "id": "subheading",
+                        "default": "内容が入ります。",
+                        "label": "内容"
+                    },
+                ]
+            }
+        ],
+        "presets":[
+            {
+                "name": "スライダー画像",
+                "category": "画像",
+                "settings": {
+                    "auto": false,
+                    "speed": 5
+                }
+            }
+        ]
+    }
+{% endschema %}
