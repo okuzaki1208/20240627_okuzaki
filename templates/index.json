@@ -98,7 +98,7 @@
       ],
       "settings": {
         "title": "ポケモンスライダーGO ver.2",
-        "title_text_size": "large",
+        "title_text_size": "extra-large",
         "title_alignment": "center",
         "slide_height": "adapt",
         "text_size": "medium",
