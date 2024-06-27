@@ -1,3 +1,15 @@
+# 20240627 テスト提出用のリポジトリです。
+<h2>作業内容</h2>
+swiper.jsを使用してスライダーを実装しました。<br>
+画像は全部で9つ登録し、3枚ずつ表示・スライドするように設定しました。
+
+<h2>注意事項</h2>
+画像の読み込みが遅く、ホワイトアウトしたままスライドされてしまうことがあります。
+現在原因を究明中です。
+
+<br><br>
+*** 以下、Dawnの説明です。***
+<br>
 # Dawn
 
 [![Build status](https://github.com/shopify/dawn/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/Shopify/dawn/actions/workflows/ci.yml?query=branch%3Amain)
