@@ -97,6 +97,9 @@
         "slide_hzjpQn"
       ],
       "settings": {
+        "title": "ポケモンずかん",
+        "title_text_size": "extra-large",
+        "title_alignment": "center",
         "slide_height": "adapt",
         "text_size": "medium",
         "text_alignment": "center center",
