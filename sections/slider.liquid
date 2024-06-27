@@ -22,7 +22,7 @@
     right: 0;
     bottom: 0;
     left: 0;
-    background-color: rgba(204,204,204,0.7);
+    background-color: rgba(204,204,204,0.6);
 }
 .swiper-slide .slide-content{
     position: absolute;
@@ -157,16 +157,46 @@
 	.swiper-button-next{
 	    right: calc(50% - 155px / 2);
 	}
+.section-title.center {
+    text-align: center;
+}
 
+.section-title.left {
+    text-align: left;
+    margin-left: 10%;
+}
 
+.section-title.right {
+    text-align: right;
+    margin-right: 10%;
+}
 
+.section-title.medium {
+    font-size: 24px; /* Adjust size as needed */
+}
+
+.section-title.large {
+    font-size: 40px; /* Adjust size as needed */
+}
+
+.section-title.extra-large {
+    font-size: 56px; /* Adjust size as needed */
+}
  </style>
 
 
 
 
 
-
+<h2 class="section-title 
+    {% if section.settings.title_alignment == 'center' %} center {% endif %}
+    {% if section.settings.title_alignment == 'left' %} left {% endif %}
+    {% if section.settings.title_alignment == 'right' %} right {% endif %}
+    {% if section.settings.title_text_size == 'large' %} large {% endif %}
+    {% if section.settings.title_text_size == 'extra-large' %} extra-large {% endif %}
+">
+    {{ section.settings.title }}
+</h2>
 
 
  <div class="swiper-container slideshow--{{ section.settings.slide_height }}">
@@ -232,11 +262,65 @@
     });
 </script>
 {% schema %}
-    {
-        "name": "swiperスライダー",
-        "class": "slide-wrap",
-        "settings": [
             {
+                "name": "swiperスライダー",
+                "class": "slide-wrap",
+                "settings": [
+                    {
+                    "type": "header",
+                    "content": "*** セクションタイトルの設定 ***"
+                    },
+                    {
+                "type": "text",
+                "id": "title",
+                "default": "セクション上部にタイトルが表示されます。",
+                "label": "セクションタイトル"
+                    },
+                    {
+                "type": "select",
+                "id": "title_text_size",
+                "label": "セクションタイトルの文字サイズ",
+                "default": "medium",
+                "options": [
+                    {
+                        "label": "中",
+                        "value": "medium"
+                    },
+                    {
+                        "label": "大",
+                        "value": "large"
+                    },
+                    {
+                        "label": "特大",
+                        "value": "extra-large"
+                    }
+                    ]
+                    },
+                    {
+                "type": "select",
+                "id": "title_alignment",
+                "label": "セクションタイトルのアラインメント",
+                "default": "center",
+                "options": [
+                    {
+                        "label": "中央",
+                        "value": "center"
+                    },
+                    {
+                        "label": "左中央",
+                        "value": "left"
+                    },
+                    {
+                        "label": "右中央",
+                        "value": "right"
+                    }
+                    ]
+                    },
+                    {
+                    "type": "header",
+                    "content": "*** スライダーの設定 ***"
+                    },
+                    {
                 "type": "select",
                 "id": "slide_height",
                 "label": "スライドの高さ",
@@ -263,7 +347,7 @@
             {
                 "type": "select",
                 "id": "text_size",
-                "label": "文字サイズ",
+                "label": "画像テキストの文字サイズ",
                 "options": [
                     {
                         "label": "中",
@@ -278,7 +362,7 @@
             {
                 "type": "select",
                 "id": "text_alignment",
-                "label": "テキストアラインメント",
+                "label": "画像テキストのアラインメント",
                 "default": "center center",
                 "options": [
                     {
@@ -346,7 +430,7 @@
         ],
         "presets":[
             {
-                "name": "スライダー画像",
+                "name": "swiperスライダー",
                 "category": "画像",
                 "settings": {
                     "auto": false,
