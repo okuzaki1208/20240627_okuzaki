@@ -1,5 +1,110 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "sections": {
+    "slider_hbAx9C": {
+      "type": "slider",
+      "blocks": {
+        "slide_YDQGqg": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/pokemon_001_nuckrar.jpg",
+            "text": "ブロック名が入ります。",
+            "subheading": "内容が入ります。"
+          }
+        },
+        "slide_mXNj3E": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/pokemon_002_eleson.jpg",
+            "text": "ブロック名が入ります。",
+            "subheading": "内容が入ります。"
+          }
+        },
+        "slide_79JqCi": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/pokemon_003_groudon.jpg",
+            "text": "ブロック名が入ります。",
+            "subheading": "内容が入ります。"
+          }
+        },
+        "slide_PnBjep": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/pokemon_004_wanaider.jpg",
+            "text": "ブロック名が入ります。",
+            "subheading": "内容が入ります。"
+          }
+        },
+        "slide_ynWMC9": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/pokemon_005_yukihami.jpg",
+            "text": "ブロック名が入ります。",
+            "subheading": "内容が入ります。"
+          }
+        },
+        "slide_ynLtMm": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/pokemon_006_kuwagannon.jpg",
+            "text": "ブロック名が入ります。",
+            "subheading": "内容が入ります。"
+          }
+        },
+        "slide_ryR7TE": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/pokemon_007_tairetsu.jpg",
+            "text": "ブロック名が入ります。",
+            "subheading": "内容が入ります。"
+          }
+        },
+        "slide_kr4FmK": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/pokemon_008_koraidon.jpg",
+            "text": "ブロック名が入ります。",
+            "subheading": "内容が入ります。"
+          }
+        },
+        "slide_hzjpQn": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/pokemon_009_wanriky.jpg",
+            "text": "ブロック名が入ります。",
+            "subheading": "内容が入ります。"
+          }
+        }
+      },
+      "block_order": [
+        "slide_YDQGqg",
+        "slide_mXNj3E",
+        "slide_79JqCi",
+        "slide_PnBjep",
+        "slide_ynWMC9",
+        "slide_ynLtMm",
+        "slide_ryR7TE",
+        "slide_kr4FmK",
+        "slide_hzjpQn"
+      ],
+      "settings": {
+        "slide_height": "adapt",
+        "text_size": "medium",
+        "text_alignment": "center center",
+        "show_overlay": true,
+        "auto": false,
+        "speed": 5
+      }
+    },
     "image_banner": {
       "type": "image-banner",
       "blocks": {
@@ -41,6 +146,7 @@
         "show_text_box": false,
         "desktop_content_alignment": "center",
         "color_scheme": "scheme-3",
+        "image_behavior": "none",
         "mobile_content_alignment": "center",
         "stack_images_on_mobile": false,
         "show_text_below": false
@@ -68,6 +174,8 @@
         "text"
       ],
       "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
         "color_scheme": "scheme-1",
         "full_width": true,
         "padding_top": 40,
@@ -79,15 +187,23 @@
       "settings": {
         "title": "Featured products",
         "heading_size": "h2",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
         "collection": "all",
         "products_to_show": 8,
         "columns_desktop": 4,
+        "full_width": false,
         "show_view_all": false,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
         "color_scheme": "scheme-1",
         "image_ratio": "adapt",
+        "image_shape": "default",
         "show_secondary_image": true,
         "show_vendor": false,
         "show_rating": false,
+        "quick_add": "none",
         "columns_mobile": "2",
         "swipe_on_mobile": false,
         "padding_top": 28,
@@ -127,6 +243,7 @@
         "heading_size": "h2",
         "desktop_layout": "left",
         "mobile_layout": "collage",
+        "card_styles": "product-card-wrapper",
         "color_scheme": "scheme-1",
         "padding_top": 36,
         "padding_bottom": 36
@@ -137,6 +254,7 @@
       "settings": {
         "heading": "",
         "heading_size": "h1",
+        "enable_video_looping": false,
         "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
         "description": "",
         "full_width": false,
@@ -200,6 +318,7 @@
     }
   },
   "order": [
+    "slider_hbAx9C",
     "image_banner",
     "rich_text",
     "featured_collection",
