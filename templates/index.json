@@ -315,102 +315,6 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
-    },
-    "slider_LPUWzq": {
-      "type": "slider",
-      "blocks": {
-        "slide_tFiicz": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/rack-of-womens-clothing.jpg",
-            "text": "ブロック名が入ります。",
-            "subheading": "内容が入ります。"
-          }
-        },
-        "slide_XDhJbX": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/bright-floral-womens-summer-fashion.jpg",
-            "text": "ブロック名が入ります。",
-            "subheading": "内容が入ります。"
-          }
-        },
-        "slide_DYeMXm": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/man-in-suit-on-stairs.jpg",
-            "text": "ブロック名が入ります。",
-            "subheading": "内容が入ります。"
-          }
-        },
-        "slide_iXVRG4": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/woman-infront-of-tree-with-berries.jpeg",
-            "text": "ブロック名が入ります。",
-            "subheading": "内容が入ります。"
-          }
-        },
-        "slide_CNq78d": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/welcome-to-my-business.jpg",
-            "text": "ブロック名が入ります。",
-            "subheading": "内容が入ります。"
-          }
-        },
-        "slide_gJXJfh": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/close-up-of-a-pine-tree-showing-texture-of-pine-needles.jpg",
-            "text": "ブロック名が入ります。",
-            "subheading": "内容が入ります。"
-          }
-        },
-        "slide_p3fJ63": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/stylish-summer-necklace.jpg",
-            "text": "ブロック名が入ります。",
-            "subheading": "内容が入ります。"
-          }
-        },
-        "slide_NRA84b": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/the-man-in-the-hat.jpg",
-            "text": "ブロック名が入ります。",
-            "subheading": "内容が入ります。"
-          }
-        },
-        "slide_37fNT9": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/fall-vegetable-box.jpg",
-            "text": "ブロック名が入ります。",
-            "subheading": "内容が入ります。"
-          }
-        }
-      },
-      "block_order": [
-        "slide_tFiicz",
-        "slide_XDhJbX",
-        "slide_DYeMXm",
-        "slide_iXVRG4",
-        "slide_CNq78d",
-        "slide_gJXJfh",
-        "slide_p3fJ63",
-        "slide_NRA84b",
-        "slide_37fNT9"
-      ],
-      "settings": {
-        "slide_height": "adapt",
-        "text_size": "medium",
-        "text_alignment": "center center",
-        "show_overlay": true,
-        "auto": false,
-        "speed": 5
-      }
     }
   },
   "order": [
@@ -420,7 +324,6 @@
     "featured_collection",
     "collage",
     "video",
-    "multicolumn",
-    "slider_LPUWzq"
+    "multicolumn"
   ]
 }
