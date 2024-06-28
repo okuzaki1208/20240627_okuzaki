@@ -318,6 +318,78 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "slider_jnUbmV": {
+      "type": "slider",
+      "blocks": {
+        "slide_hyyqRH": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/pokemon_009_wanriky.jpg",
+            "text": "ブロック名が入ります。",
+            "subheading": "内容が入ります。"
+          }
+        },
+        "slide_gqn7XW": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/pokemon_008_koraidon.jpg",
+            "text": "ブロック名が入ります。",
+            "subheading": "内容が入ります。"
+          }
+        },
+        "slide_kX8DWK": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/pokemon_007_tairetsu.jpg",
+            "text": "ブロック名が入ります。",
+            "subheading": "内容が入ります。"
+          }
+        },
+        "slide_BicjBn": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/pokemon_006_kuwagannon.jpg",
+            "text": "ブロック名が入ります。",
+            "subheading": "内容が入ります。"
+          }
+        },
+        "slide_kP83Ug": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/pokemon_003_groudon.jpg",
+            "text": "ブロック名が入ります。",
+            "subheading": "内容が入ります。"
+          }
+        },
+        "slide_tf8K33": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/pokemon_002_eleson.jpg",
+            "text": "ブロック名が入ります。",
+            "subheading": "内容が入ります。"
+          }
+        }
+      },
+      "block_order": [
+        "slide_hyyqRH",
+        "slide_gqn7XW",
+        "slide_kX8DWK",
+        "slide_BicjBn",
+        "slide_kP83Ug",
+        "slide_tf8K33"
+      ],
+      "settings": {
+        "title": "セクション上部にタイトルが表示されます。",
+        "title_text_size": "medium",
+        "title_alignment": "center",
+        "slide_height": "adapt",
+        "text_size": "medium",
+        "text_alignment": "center center",
+        "show_overlay": true,
+        "auto": false,
+        "speed": 5
+      }
     }
   },
   "order": [
@@ -327,6 +399,7 @@
     "featured_collection",
     "collage",
     "video",
-    "multicolumn"
+    "multicolumn",
+    "slider_jnUbmV"
   ]
 }
